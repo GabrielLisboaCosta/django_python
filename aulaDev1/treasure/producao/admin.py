@@ -1,6 +1,6 @@
-# from django.contrib import admin
-# from production.models import Production
+from django.contrib import admin
+from producao.models import Production
 #
 # # Register your models here.
 #
-# admin.site.register(Production)
+admin.site.register(Production)
