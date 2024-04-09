@@ -1,4 +1,4 @@
-from producao.models.base import *
+from producao.models.base import BaseModel
 from django.core.validators import MinLengthValidator
 from django.db import models
 
@@ -9,13 +9,13 @@ class Production(BaseModel):
     class Meta:
         abstract = False
 
-    title = models.CharField(max_length=100, validators=[MinLengthValidator(1)])
+    titulo = models.CharField(max_length=100, validators=[MinLengthValidator(1)])
 
-    advisory_certificate = models.CharField(max_length=10, validators=[MinLengthValidator(1)])
+    classificacao = models.CharField(max_length=10, validators=[MinLengthValidator(1)])
 
-    lengh = models.DurationField()
+    duracao = models.DurationField()
 
-    #genre =
+    #genero = enums.genero
 
     tredimenter = models.IntegerField()
 
