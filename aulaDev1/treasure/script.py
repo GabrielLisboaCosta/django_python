@@ -25,3 +25,4 @@ elif opcao == 2:
 # 4-delete delete()
 # 5-consultar 1 registro get()
 # 6-consultar 5 diferentes
+#teste
