@@ -12,21 +12,39 @@ class Production(BaseModel):
 
     titulo = models.CharField(max_length=100, validators=[MinLengthValidator(1)])
 
-    classificacao = models.CharField(max_length=10, validators=[MinLengthValidator(1)])
-
-    duracao = models.DurationField()
+    sinopse = models.CharField(max_length=500, validators=[MinLengthValidator(10)])
 
     genero = genero.DEFAULT
 
-    tredimenter = models.IntegerField()
+    classificacao = models.CharField(max_length=10, validators=[MinLengthValidator(1)])
 
-    reviews = models.FloatField()
+    quantidade_avaliacoes = models.IntegerField(validators=[MinLengthValidator(1)])
 
-    specs = models.CharField(max_length=50, validators=[MinLengthValidator(5)])
+    nota = models.IntegerField(max_length=10, validators=[MinLengthValidator(1)])
 
-    sinopse = models.CharField(max_length=500, validators=[MinLengthValidator(10)])
+    duracao = models.DurationField()
 
-    realease_date = models.DateField()
+    populadidade = models.IntegerField(max_length=100, validators=[MinLengthValidator(0)])
+
+    especificacoes = models.CharField(max_length=50, validators=[MinLengthValidator(5)])
+
+    lancamento = models.DateField()
 
     def __str__(self):
         return self.title
+
+    def alterar_genero(self, gen: genero):
+        if isinstance(gen, genero):
+            self.genero = gen
+            return True
+        else:
+            return False
+
+    def avaliar(self, nova_nota):
+        self.nota = float(nova_nota)
+        return print(f'Nota: {self.nota}')
+
+    def alterar_popularidade(self, alteracao: int):
+        self.populadidade = alteracao
+        return print(f'Popularidade: {self.populadidade}')
+    
