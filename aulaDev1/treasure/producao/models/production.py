@@ -1,6 +1,7 @@
 from producao.models.base import BaseModel
 from django.core.validators import MinLengthValidator
 from django.db import models
+from enums import genero
 
 
 class Production(BaseModel):
