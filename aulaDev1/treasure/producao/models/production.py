@@ -15,7 +15,7 @@ class Production(BaseModel):
 
     duracao = models.DurationField()
 
-    #genero = enums.genero
+    genero = genero.DEFAULT
 
     tredimenter = models.IntegerField()
 
