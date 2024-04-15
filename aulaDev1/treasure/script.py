@@ -31,9 +31,9 @@ elif opcao == 3:
         print(f"Time: {time.nome}, Torcedores: {time.torcedores}")
 
 # 4-delete delete()
-# elif opcao == 4:
-#    cruzeiro = Example.objects.get(nome="Cruzeiro")
-#    cruzeiro.delete()
+elif opcao == 4:
+    cruzeiro = Example.objects.get(nome="Cruzeiro")
+    cruzeiro.delete()
 
 # 5-consultar 1 registro get()
 elif opcao == 5:
