@@ -23,8 +23,8 @@ elif opcao == 2:
 # 3-atualizar/consulta
 elif opcao == 3:
     flamengo = Example.objects.get(nome="Flamengo")
-    flamengo.torcedores = randint(1, 10000)  # Atualiza o número de torcedores
-    flamengo.save()  # Salva as alterações
+    flamengo.torcedores = randint(1, 10000)
+    flamengo.save()
 
     todos_times = Example.objects.all()
     for time in todos_times:
