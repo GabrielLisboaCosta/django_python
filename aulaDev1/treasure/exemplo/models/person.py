@@ -1,5 +1,5 @@
 from django.db import models
-from producao.models.base import BaseModel
+from exemplo.models.base import BaseModel
 
 
 class Person(BaseModel):
