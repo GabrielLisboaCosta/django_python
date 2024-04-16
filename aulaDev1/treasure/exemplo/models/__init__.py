@@ -4,3 +4,4 @@ from .passaport import *
 from .person import *
 from .reporter import *
 from .article import *
+from .magazine import *
