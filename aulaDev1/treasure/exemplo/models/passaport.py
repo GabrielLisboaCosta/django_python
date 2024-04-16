@@ -7,10 +7,10 @@ class Passaport(BaseModel):
     number = models.CharField(max_length=100, verbose_name='Passaport Nuber')
     #issue_date = models.DateField(verbose_name='Issue Date')
     expiration_date = models.DateField(verbose_name='Expiration Date')
-    ower = models.OneToOneField(Person, on_delete=models.CASCADE, primary_key=True)
+    owner = models.OneToOneField(Person, on_delete=models.CASCADE, primary_key=True)
 
     class Meta:
         abstract = False
 
     def __str__(self):
-        return f'{self.number} - {self.ower.name}'
+        return f'{self.number} - {self.owner.name}'
