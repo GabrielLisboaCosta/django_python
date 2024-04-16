@@ -1,10 +1,11 @@
-from exemplo.models.exemplo import Example
+from exemplo.models import Example
 from django.contrib.auth import get_user_model
 from random import randint
 
 User = get_user_model()
 
-opcao = input("Escolha a opção que deseja: ")
+opcao = int(input("Escolha a opção que deseja: "))
+
 
 # 1-gerar dados save()
 if opcao == 1:
